@@ -15,7 +15,8 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
     private Long id;
-
+    @Version
+    private Long version;
     private String firstName;
     private String lastName;
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
