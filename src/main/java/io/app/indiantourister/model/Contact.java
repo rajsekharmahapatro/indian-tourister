@@ -1,5 +1,6 @@
 package io.app.indiantourister.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,6 +14,8 @@ public class Contact {
 
     private Long mobile;
     private String email;
-    @ManyToOne()
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "user_id")
     Customer customer;
 }

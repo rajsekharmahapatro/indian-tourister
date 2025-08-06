@@ -8,7 +8,6 @@ import java.util.Set;
 @Data
 @JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class CustomerDto {
-    private Long id;
     private String firstName;
     private String lastName;
     private Set<AddressDto> addressDto;
