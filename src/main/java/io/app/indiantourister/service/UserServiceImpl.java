@@ -18,6 +18,6 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Customer processUser(CustomerDto customerDto) {
-        return customerRepo.save(customerMapper.mapToUserEntity(customerDto));
+        return customerRepo.save(customerMapper.toEntity(customerDto));
     }
 }
